@@ -1,0 +1,17 @@
+<div class="modal"> <!-- Контейнер для содержимого модального окна -->
+  <h2> {{ object ? 'Редактировать объект' : 'Создать объект' }}</h2> <!-- Заголовок модального окна -->
+  <form [formGroup]="objectForm" (ngSubmit)="onSubmit()"> <!-- Форма, которая будет отправлять данные при нажатие на кнопку --> 
+    <div>
+      <mat-label>Название</mat-label>
+      <input placeholder="Ёжик" type="text" formControlName="name"> <!-- Поле ввода -->
+    </div>
+    <div>
+      <mat-label>Описание</mat-label>
+      <textarea  placeholder="Длина тела 13–27 см, хвост (1–5 см) незаметен. Спина и бока покрыты тёмноокрашенными иглами." formControlName="description"></textarea> <!-- Поле ввода для описания -->
+    </div>
+    <div>
+      <button mat-stroked-button color="primary" type="submit">{{ object ? 'Сохранить изменения' : 'Создать' }}</button> <!-- Кнопка сохранения -->
+      <button mat-stroked-button color="primary" type="button" (click)="closeModal()">Отмена</button> <!--  Кнопка отмены с привязкой к методу closeModal() -->
+    </div>
+  </form>
+</div>

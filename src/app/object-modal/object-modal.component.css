@@ -1,0 +1,41 @@
+.modal {
+  z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.modal form div {
+  margin-bottom: 10px;
+}
+
+.modal form div label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal form div input,
+.modal form div textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal form div button {
+  margin-right: 10px;
+}
+
+.modal form div button:last-child {
+  margin-right: 0;
+}

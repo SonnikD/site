@@ -1,0 +1,16 @@
+<h2>Вход</h2> <!-- Заголовок "Вход" -->
+<form class="example-form" (submit)="login()"> <!-- Форма с классом "example-form" и обработчиком события submit -->
+  <p>
+    <mat-form-field class="example-full-width">  <!-- Поле формы с классом "example-full-width" -->
+      <mat-label>Email</mat-label> <!-- Поле ввода email -->
+      <input matInput placeholder="pat@example.com" type="email" [(ngModel)]="email" name="email"> <!-- Поле ввода email с привязкой к свойству "email" -->
+    </mat-form-field>
+  </p>
+  <mat-form-field class="example-full-width">  <!-- Поле формы с классом "example-full-width" -->
+    <mat-label>Пароль:</mat-label>   <!-- Поле ввода пароля -->
+    <input matInput type="password" [(ngModel)]="password" name="password"> <!-- Поле ввода пароля с привязкой к свойству "password" -->
+  </mat-form-field>
+
+  <p><button mat-raised-button color="warn" type="submit">Войти</button></p>    <!-- Кнопка "Войти"  -->
+  <button type="button" mat-stroked-button color="warn" (click)="switchToRegistration.emit()">Регистрация</button> <!-- Кнопка "Регистрация" -->
+</form>

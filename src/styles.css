@@ -1,0 +1,18 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.notification:hover {
+  opacity: 0.8;
+}
+

@@ -1,0 +1,28 @@
+<div style="text-align: center;"> <!-- Выравнивание содержимого контейнера по центру -->
+
+<h1>Список объектов</h1> <!--Заголовок-->
+
+<p></p>  <!--  Пустой абзац -->
+<table width="250" border="1" style="display: inline-block;"> <!-- Таблица со стилями -->
+
+  <thead> <!-- Заголовок таблицы  -->
+    <tr>
+      <th>ID</th>  <!-- Ячейка заголовка таблицы с текстом "ID" -->
+      <th>Название</th> <!-- Ячейка заголовка таблицы с текстом "Название" -->
+      <th>Описание</th> <!-- Ячейка заголовка таблицы с текстом "Описание" -->
+      <th>Действия</th> <!-- Ячейка заголовка таблицы с текстом "Действия" -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let object of objects"> <!-- object - переменная, которая будет использоваться для итерации по массиву objects -->
+      <td>{{ object.id }}</td> <!-- Ячейка таблицы с содержимым object.id -->
+      <td>{{ object.name }}</td> <!-- Ячейка таблицы с содержимым object.name -->
+      <td>{{ object.description }}</td> <!-- Ячейка таблицы с содержимым object.description -->
+      <td>
+        <button mat-raised-button color="warn" (click)="openEditModal(object)">Редактировать</button> <!-- Кнопка, при нажатии на которую будет вызываться метод openEditModal() -->
+        <button mat-raised-button color="warn" (click)="deleteObject(object.id)">Удалить</button> <!-- Кнопка, при нажатии на которую будет вызываться метод deleteObject() -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
